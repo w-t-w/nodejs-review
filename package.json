@@ -12,5 +12,8 @@
     "lessons review"
   ],
   "author": "Black Myth WuKong",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.2.3"
+  }
 }
