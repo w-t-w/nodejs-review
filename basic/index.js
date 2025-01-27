@@ -6,3 +6,5 @@ require('./commonjs');
 require('./builtins');
 // 阻塞性/非阻塞性 IO
 require('./io');
+// callback 回调函数
+require('./callback');
