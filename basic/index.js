@@ -2,3 +2,5 @@
 require('./general');
 // CommonJS 模块化
 require('./commonjs');
+// 内置模块
+require('./builtins');
