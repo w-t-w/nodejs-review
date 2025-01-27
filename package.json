@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-review",
+  "version": "1.0.0",
+  "description": "nodejs formal review",
+  "main": "index.js",
+  "scripts": {
+    "basic": "nodemon ./basic/index.js",
+    "game": "nodemon ./game/index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "lessons review"
+  ],
+  "author": "Black Myth WuKong",
+  "license": "MIT"
+}
