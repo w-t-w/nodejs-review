@@ -12,3 +12,5 @@ require('./callback');
 require('./loop');
 // Promise 异步事件同步调用
 require('./promise');
+// async/await 异步事件同步调用
+require('./asyncawait');
