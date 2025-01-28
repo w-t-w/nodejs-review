@@ -10,3 +10,5 @@ require('./io');
 require('./callback');
 // 事件循环机制
 require('./loop');
+// Promise 异步事件同步调用
+require('./promise');
