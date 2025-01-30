@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>第一届 NodeJS 杯《石头、剪刀与布》的游戏大赛</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .game_show_result_container {
+            width: 800px;
+            height: 600px;
+            background-color: lightgrey;
+            box-sizing: border-box;
+            padding: 8px 6px;
+            overflow: auto;
+        }
+
+        .game_selections_area {
+            margin-top: 6px;
+        }
+
+        .game_selections_area_action {
+            width: 88px;
+            height: 30px;
+            margin-left: 8px;
+            cursor: pointer;
+            border: 1px solid lightseagreen;
+            border-radius: 4px;
+            background-color: lightseagreen;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+    </style>
 </head>
 <body>
+<section id="game_show_result_container" class="game_show_result_container">
 
+</section>
+<section class="game_selections_area">
+    <button id="rock" class="game_selections_area_action">
+        石头
+    </button>
+    <button id="scissor" class="game_selections_area_action">
+        剪刀
+    </button>
+    <button id="paper" class="game_selections_area_action">
+        布
+    </button>
+</section>
+<script type="text/javascript">
+    const game_actions = document.getElementsByClassName('game_selections_area_action');
+    const game_container = document.getElementById('game_show_result_container');
+    const game_actions_arr = [...game_actions];
+
+    game_actions_arr.forEach((action_element) => {
+        action_element.addEventListener('click', (event) => {
+            const target = event.target;
+            const id = target.id;
+            fetch(`/game?action=${id}`)
+                .then(response => response.text())
+                .then(text => {
+                    game_container.innerHTML += `${text}<br/>`;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        });
+    });
+</script>
 </body>
 </html>
