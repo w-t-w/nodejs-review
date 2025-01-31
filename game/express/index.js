@@ -74,4 +74,4 @@
 //     console.log(`The server is running at http://localhost:${PORT}!`);
 // });
 
-console.log('NodeJS《第十三课: express 异步事件同步调用尝试请求处理剪刀、石头与布的网页游戏》已回顾完毕并通过!如需查看使用,将上述代码的注释剃掉删除即可!');
+console.log('NodeJS《第十三课: express 拥有强大的路由分发功能请求处理剪刀、石头与布的网页游戏》已回顾完毕并通过!如需查看使用,将上述代码的注释剃掉删除即可!');
