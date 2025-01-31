@@ -15,6 +15,8 @@ module.exports = (player_action) => {
     let player_won_index = computer_random + 1;
     if (player_won_index >= selections_length) player_won_index = 0;
 
+    console.log('比赛结果为:');
+    console.log(`玩家: ${player_action}, 电脑: ${computer_action}`);
     if (player_action === computer_action) {
         console.log('平局!');
         return 0;
