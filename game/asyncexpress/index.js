@@ -29,7 +29,7 @@
 //     return false;
 // });
 //
-// app.get('/game', (req, res) => {
+// app.get('/game', (req, res, next) => {
 //     const {query: {action}} = req;
 //
 //     if (player_won_count >= player_won_sum || player_won_sum === player_same_error_code) {
@@ -52,10 +52,16 @@
 //     }
 //     last_player_action = action;
 //
+//     next();
+//
+//     if (res.player_won) player_won_count++;
+// }, (req, res) => {
+//     const {query: {action}} = req;
+//
 //     const timer = setTimeout(() => {
 //         const result = moduleLibrary.game(action);
 //
-//         if (result === player_won_code) player_won_count++;
+//         if (result === player_won_code) res.player_won = true;
 //
 //         res.status(200);
 //         res.type('application/json');
@@ -74,4 +80,4 @@
 //     console.log(`The server is running at http://localhost:${PORT}!`);
 // });
 
-console.log('NodeJS《第十三课: express 异步事件同步调用尝试请求处理剪刀、石头与布的网页游戏》已回顾完毕并通过!如需查看使用,将上述代码的注释剃掉删除即可!');
+console.log('NodeJS《第十四课: express 拥有强大的路由分发功能请求处理剪刀、石头与布的网页游戏》已回顾完毕并通过!如需查看使用,将上述代码的注释剃掉删除即可!');
