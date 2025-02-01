@@ -1,3 +1,9 @@
+const net = require('net');
+
+const PACKAGE_HEADER_LENGTH = 4;
+
+const PORT = 3000;
+
 const data = {
     136797: "01 | 课程介绍",
     136798: "02 | 内容综述",
@@ -19,3 +25,35 @@ const data = {
     146569: "18 | HTTP：什么是HTTP服务器？",
     146582: "19 | HTTP：简单实现一个HTTP服务器"
 };
+
+const server = net.createServer(socket => {
+    socket.on('data', buffer => {
+        console.log(buffer);
+        const timer = setTimeout(() => {
+            const {seq, result} = decode(buffer);
+            socket.write(encode(data[result], seq));
+            clearTimeout(timer);
+        }, 10 + Math.random() * 1000);
+    });
+});
+
+server.listen(PORT, () => {
+    console.log(`The server is running at http://localhost:${PORT}!`);
+});
+
+function encode(data, seq) {
+    const header = Buffer.alloc(PACKAGE_HEADER_LENGTH);
+    header.writeInt32BE(seq);
+    const body = Buffer.from(data);
+    return Buffer.concat([header, body]);
+}
+
+function decode(buffer) {
+    const seq = buffer.readInt32BE();
+    const body = buffer.slice(PACKAGE_HEADER_LENGTH);
+    const result = body.readInt32BE();
+    return {
+        result,
+        seq
+    };
+}
