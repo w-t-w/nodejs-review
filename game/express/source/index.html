@@ -55,8 +55,8 @@
     const game_container = document.getElementById('game_show_result_container');
     const game_selections = document.getElementsByClassName('game_selections_area_action');
 
-    [...game_selections].forEach(game_selection_action => {
-        game_selection_action.addEventListener('click', (event) => {
+    [...game_selections].forEach(action_element => {
+        action_element.addEventListener('click', (event) => {
             const target = event.target;
             const id = target.id;
             fetch(`/game?action=${id}`)

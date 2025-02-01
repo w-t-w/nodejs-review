@@ -2,8 +2,8 @@ module.exports = (player_action) => {
     const game_selections = ['scissor', 'rock', 'paper'];
 
     if (!game_selections.includes(player_action)) {
-        console.error('请输入准确的比赛游戏选项手势:【scissor rock or paper】');
-        return false;
+        console.error('请输入准确的比赛游戏选项手势【scissor rock or paper】!');
+        process.exit(1);
     }
 
     const selections_length = game_selections.length;

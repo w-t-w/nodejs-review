@@ -16,6 +16,10 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.21.2",
-    "glob": "^7.2.3"
+    "glob": "^7.2.3",
+    "koa": "^2.15.3",
+    "koa-graphql": "^0.12.0",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0"
   }
 }
