@@ -4,5 +4,5 @@ require('./simplex');
 require('./halfduplex-simple');
 // rpc 调用-普通的半双工通信
 require('./halfduplex-normal');
-// rpc 调用-全双工通信
+// rpc 调用-完整的全双工通信
 require('./fullduplex');
