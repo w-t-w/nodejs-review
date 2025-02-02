@@ -11,6 +11,7 @@
 //
 // const koa = new Koa();
 //
+// // koa.use(KoaStatic(STATIC_DIR));
 // koa.use(KoaStatic(STATIC_DIR));
 //
 // koa.use(KoaMount('/', ctx => {
