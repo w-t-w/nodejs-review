@@ -14,3 +14,5 @@ require('./loop');
 require('./promise');
 // async/await 异步事件同步调用
 require('./asyncawait');
+// Buffer 与 protocol-buffers 应用
+require('./protocolbuffers');
