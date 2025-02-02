@@ -16,3 +16,5 @@ require('./promise');
 require('./asyncawait');
 // Buffer 与 protocol-buffers 应用
 require('./protocolbuffers');
+// NodeJS vm 模板引擎
+require('./template');
