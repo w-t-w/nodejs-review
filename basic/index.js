@@ -18,3 +18,5 @@ require('./asyncawait');
 require('./protocolbuffers');
 // NodeJS vm 模板引擎
 require('./template');
+// Graphql API 接口规范化查询方式(语言)
+require('./graphql');
