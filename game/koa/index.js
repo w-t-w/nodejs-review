@@ -14,7 +14,6 @@
 //     const {response} = ctx;
 //     response.status = 400;
 //     response.body = '';
-//     return false;
 // }));
 //
 // koa.use(KoaMount('/game', moduleLibrary.koa.gameKoa));

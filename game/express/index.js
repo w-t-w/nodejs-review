@@ -26,7 +26,6 @@
 // app.get('/favicon.ico', (req, res) => {
 //     res.status(400);
 //     res.send('');
-//     return false;
 // });
 //
 // app.get('/game', (req, res) => {
