@@ -2,3 +2,5 @@
 require('./download');
 // 极客时间 detail 详情部分网页项目练习
 require('./detail');
+// 极客时间 video 视频部分网页项目练习
+require('./video');
