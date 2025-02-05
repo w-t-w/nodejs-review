@@ -6,3 +6,5 @@ require('./javascript');
 require('./memory');
 // child process 子进程
 require('./cp');
+// cluster 子进程集群
+require('./cluster');
