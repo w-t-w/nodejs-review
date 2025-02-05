@@ -1,0 +1,186 @@
+Statistical profiling result from ./isolate-0x140008000-85104-v8.log, (1442 ticks, 1372 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.4%    0.4%  Builtin: LoadIC
+      5    0.3%    0.3%  Builtin: LoadICBaseline
+      4    0.3%    0.3%  Builtin: KeyedLoadIC_Megamorphic
+      3    0.2%    0.2%  JS: *normalizeString node:path:77:25
+      3    0.2%    0.2%  Builtin: ToBooleanForBaselineJump
+      3    0.2%    0.2%  Builtin: Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      2    0.1%    0.1%  JS: *resolve node:path:1162:10
+      2    0.1%    0.1%  Builtin: StrictEqual_Baseline
+      2    0.1%    0.1%  Builtin: StoreIC
+      2    0.1%    0.1%  Builtin: LoadIC_NoFeedback
+      2    0.1%    0.1%  Builtin: Call_ReceiverIsNotNullOrUndefined_Baseline_Compact
+      2    0.1%    0.1%  Builtin: BitwiseOr_Baseline
+      2    0.1%    0.1%  Builtin: BaselineLeaveFrame
+      1    0.1%    0.1%  JS: ~parseAcceptEncoding /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/negotiator@0.6.3/node_modules/negotiator/lib/encoding.js:31:29
+      1    0.1%    0.1%  JS: ^send /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-send@5.0.1/node_modules/koa-send/index.js:50:21
+      1    0.1%    0.1%  JS: ^processTicksAndRejections node:internal/process/task_queues:72:35
+      1    0.1%    0.1%  JS: ^handleRequest /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:180:16
+      1    0.1%    0.1%  JS: ^dispatch /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+      1    0.1%    0.1%  JS: ^callback node:internal/streams/writable:764:63
+      1    0.1%    0.1%  JS: ^acceptsEncodings /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/request.js:572:19
+      1    0.1%    0.1%  JS: ^_addHeaderLine node:_http_incoming:382:24
+      1    0.1%    0.1%  JS: *normalize node:path:1204:12
+      1    0.1%    0.1%  JS: *nextTick node:internal/process/task_queues:113:18
+      1    0.1%    0.1%  JS: *get node:internal/bootstrap/node:100:8
+      1    0.1%    0.1%  JS: *<anonymous> node:internal/validators:459:42
+      1    0.1%    0.1%  JS: *<anonymous> /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/delegates@1.0.0/node_modules/delegates/index.js:71:40
+      1    0.1%    0.1%  Builtin: ToString
+      1    0.1%    0.1%  Builtin: StoreICBaseline
+      1    0.1%    0.1%  Builtin: NumberToString
+      1    0.1%    0.1%  Builtin: LoadGlobalICBaseline
+      1    0.1%    0.1%  Builtin: LessThan_Baseline
+      1    0.1%    0.1%  Builtin: KeyedStoreIC
+      1    0.1%    0.1%  Builtin: KeyedLoadICBaseline
+      1    0.1%    0.1%  Builtin: KeyedLoadIC
+      1    0.1%    0.1%  Builtin: FunctionPrototypeApply
+      1    0.1%    0.1%  Builtin: ForInEnumerate
+      1    0.1%    0.1%  Builtin: FastNewRestArguments
+      1    0.1%    0.1%  Builtin: FastNewClosure
+      1    0.1%    0.1%  Builtin: FastFunctionPrototypeBind
+      1    0.1%    0.1%  Builtin: DeleteProperty
+      1    0.1%    0.1%  Builtin: CreateShallowArrayLiteral
+      1    0.1%    0.1%  Builtin: CompileLazy
+      1    0.1%    0.1%  Builtin: Call_ReceiverIsNotNullOrUndefined
+      1    0.1%    0.1%  Builtin: CallVarargs
+      1    0.1%    0.1%  Builtin: BaselineOutOfLinePrologue
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     70    4.9%    4.9%  JavaScript
+      0    0.0%    0.0%  C++
+     38    2.6%    2.6%  GC
+      0    0.0%          Shared libraries
+   1372   95.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1372   95.1%  UNKNOWN
+    390   28.4%    JS: ^writevGeneric node:internal/stream_base_commons:121:23
+    390  100.0%      JS: ^Socket._writeGeneric node:net:933:42
+    390  100.0%        JS: ^Socket._writev node:net:970:36
+    390  100.0%          JS: ^doWrite node:internal/streams/writable:587:17
+    390  100.0%            JS: ^clearBuffer node:internal/streams/writable:744:21
+    379   27.6%    JS: ^byteLength node:buffer:770:20
+    191   50.4%      JS: ^set body /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/response.js:135:11
+    191  100.0%        JS: ^<anonymous> /Users/wtw/FrontEnd/nodejs-review/performance/tools/index.js:16:23
+    191  100.0%          JS: ^dispatch /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+    191  100.0%            JS: ^serve /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-static@5.0.0/node_modules/koa-static/index.js:39:33
+    188   49.6%      JS: ^write_ node:_http_outgoing:938:16
+    188  100.0%        JS: ^end node:_http_outgoing:1080:45
+    188  100.0%          JS: ^respond /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:256:17
+    188  100.0%            JS: ^handleResponse /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:184:28
+    346   25.2%    JS: ^readFileSync node:fs:434:22
+    340   98.3%      JS: ^<anonymous> /Users/wtw/FrontEnd/nodejs-review/performance/tools/index.js:16:23
+    340  100.0%        JS: ^dispatch /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+    340  100.0%          JS: ^serve /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-static@5.0.0/node_modules/koa-static/index.js:39:33
+    340  100.0%            Builtin: AsyncFunctionAwaitRejectClosure
+      5    1.4%      JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/performance/tools/index.js:16:23
+      4   80.0%        JS: ^dispatch /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+      4  100.0%          JS: ^serve /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-static@5.0.0/node_modules/koa-static/index.js:39:33
+      4  100.0%            Builtin: AsyncFunctionAwaitRejectClosure
+      1   20.0%        JS: ~dispatch /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-compose@4.1.0/node_modules/koa-compose/index.js:35:23
+      1  100.0%          JS: ~serve /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa-static@5.0.0/node_modules/koa-static/index.js:39:33
+      1  100.0%            Builtin: AsyncFunctionAwaitRejectClosure
+     41    3.0%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+     37   90.2%      JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      4   10.8%        JS: ~<anonymous> node:http:1:1
+      4  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      4  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      3    8.1%        JS: ~<anonymous> node:tty:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      3    8.1%        JS: ~<anonymous> node:internal/streams/duplex:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      3    8.1%        JS: ~<anonymous> node:internal/fs/promises:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      3    8.1%        JS: ~<anonymous> node:crypto:1:1
+      3  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      3  100.0%            JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      2    5.4%        JS: ~<anonymous> node:internal/streams/operators:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2    5.4%        JS: ~<anonymous> node:child_process:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2    5.4%        JS: ~<anonymous> node:assert:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      2    5.4%        JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/performance/tools/index.js:1:1
+      2  100.0%          JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/performance/index.js:1:1
+      2  100.0%            JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.7%        JS: ~<anonymous> node:net:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/readable:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/streams/pipeline:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/perf/observe:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/fs/streams:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/cluster/round_robin_handle:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:_http_common:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> node:_http_client:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    2.7%        JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/destroy@1.2.0/node_modules/destroy/index.js:1:1
+      1  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1532:37
+      1  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1667:37
+      2    4.9%      JS: ^compileForPublicLoader node:internal/bootstrap/realm:332:25
+      2  100.0%        JS: ^loadBuiltinModule node:internal/modules/helpers:104:27
+      2  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      2  100.0%            JS: ^traceSync node:diagnostics_channel:320:12
+      2    4.9%      JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      2  100.0%        JS: ^traceSync node:diagnostics_channel:320:12
+      2  100.0%          JS: ^wrapModuleLoad node:internal/modules/cjs/loader:212:24
+      2  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1332:36
+     16    1.2%    JS: ^wrapSafe node:internal/modules/cjs/loader:1473:18
+     15   93.8%      JS: ^<anonymous> node:internal/modules/cjs/loader:1532:37
+     15  100.0%        JS: ^<anonymous> node:internal/modules/cjs/loader:1667:37
+     15  100.0%          JS: ^<anonymous> node:internal/modules/cjs/loader:1299:33
+     15  100.0%            JS: ^<anonymous> node:internal/modules/cjs/loader:1040:24
+      1    6.3%      JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/get-intrinsic@1.2.7/node_modules/get-intrinsic/index.js:1:1
+      1  100.0%        JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/call-bound@1.0.3/node_modules/call-bound/index.js:1:1
+      1  100.0%          JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/is-generator-function@1.1.0/node_modules/is-generator-function/index.js:1:1
+      1  100.0%            JS: ~<anonymous> /Users/wtw/FrontEnd/nodejs-review/node_modules/.pnpm/koa@2.15.3/node_modules/koa/lib/application.js:1:1
+
