@@ -8,3 +8,5 @@ require('./memory');
 require('./cp');
 // cluster 子进程集群
 require('./cluster');
+// 进程守护与管理
+require('./guard');
