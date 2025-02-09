@@ -9,6 +9,7 @@
     "network": "nodemon ./network/index.js",
     "project": "nodemon ./project/index.js",
     "performance": "nodemon ./performance/index.js",
+    "koaless": "nodemon ./koaless/index.js",
     "project-list-server": "sh ./project/list/tmp/prod.sh",
     "performance-profile": "node --prof ./performance/index.js",
     "performance-profile-report": "node --prof-process ./isolate-0x140008000-85104-v8.log > log.txt",
