@@ -1,0 +1,2 @@
+require('./column');
+require('./articles');
