@@ -15,7 +15,8 @@
     "performance-inspect": "node --inspect-brk ./performance/index.js",
     "koaless": "nodemon ./koaless/index.js",
     "koaless-server": "node ./koaless/backend/index.js",
-    "koaless-uploader": "node ./koaless/workspace/index.js"
+    "koaless-uploader": "node ./koaless/workspace/index.js",
+    "algoritm": "node ./algoritm/index.js"
   },
   "keywords": [
     "nodejs",
