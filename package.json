@@ -14,7 +14,8 @@
     "performance-profile-report": "node --prof-process ./isolate-0x140008000-85104-v8.log > log.txt",
     "performance-inspect": "node --inspect-brk ./performance/index.js",
     "koaless": "nodemon ./koaless/index.js",
-    "koaless-server": "node ./koaless/backend/index.js"
+    "koaless-server": "node ./koaless/backend/index.js",
+    "koaless-uploader": "node ./koaless/workspace/index.js"
   },
   "keywords": [
     "nodejs",
@@ -40,9 +41,13 @@
     "@babel/preset-react": "^7.26.3",
     "babel-loader": "^9.2.1",
     "core-js": "^3.40.0",
+    "memory-fs": "^0.5.0",
+    "mkdirp": "^3.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "webpack": "^5.97.1",
+    "request": "^2.88.2",
+    "text-loader": "^0.0.1",
+    "webpack": "^4.41.2",
     "webpack-cli": "^6.0.1"
   }
 }

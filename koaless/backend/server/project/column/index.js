@@ -20,7 +20,7 @@ const tcp_server = server.createServer((request, response) => {
     //...
 
     response.end({
-        column: columns[0],
+        column: columns[1],
         recommend_columns: [columns[1], columns[2]]
     });
 });

@@ -15,7 +15,7 @@ const server = http.createServer((request, response) => {
 
     const {column_id} = querystring.parse(query);
 
-    console.log(`课程详情 ID 为 ${column_id}`);
+    console.log(`课程详情的 ID 为: ${column_id}`);
 
     //...
 
